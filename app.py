@@ -16,7 +16,7 @@ def hello():
     return render_template('index.html')
 
 
-@app.route('/sun')
+@app.route('/sun/')
 def sun():
     location = ephem.city('Warsaw')
     body = ephem.Sun(location)
