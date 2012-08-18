@@ -1,13 +1,7 @@
 import os
 from flask import Flask, render_template
 
-PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
-
-app = Flask(
-    __name__,
-    static_folder=os.path.join(PROJECT_ROOT, 'public'),
-    static_url_path='/public'
-)
+app = Flask(__name__)
 
 @app.route('/')
 def hello():
