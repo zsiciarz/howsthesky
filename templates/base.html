@@ -1,0 +1,36 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{% block title %}How's the sky?{% endblock %}</title>
+  <meta name="description" content="">
+  <meta name="author" content="@zsiciarz">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet/less" type="text/css" href="{{ url_for('static', filename='css/style.less') }}">
+  {% block extra_style %}{% endblock %}
+  <script src="{{ url_for('static', filename='js/libs/modernizr-2.5.3.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/libs/less-1.3.0.min.js') }}"></script>
+</head>
+
+<body>
+  <div class="container">
+      {% block content %}{% endblock %}
+  </div> <!-- /container -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/libs/jquery-1.7.2.min.js') }}"><\/script>')</script>
+  <script defer src="{{ url_for('static', filename='js/libs/bootstrap-alert.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+  <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+  {% block extra_script %}{% endblock %}
+  <!--[if lt IE 7 ]>
+    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+</body>
+</html>
