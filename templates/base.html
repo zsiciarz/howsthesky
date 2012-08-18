@@ -20,6 +20,7 @@
   <header>
     <h1>How's the sky?</h1>
   </header>
+  <div id="sun">asdasdsdas</div>
   {% block content %}{% endblock %}
   <footer>
       Copyright <a href="http://siciarz.net">Zbigniew Siciarz</a> 2012.
@@ -27,8 +28,10 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/libs/jquery-1.7.2.min.js') }}"><\/script>')</script>
-  <script src="{{ url_for('static', filename='js/libs/underscore-min.js') }}">
-  <script src="{{ url_for('static', filename='js/libs/backbone-min.js') }}">
+  <script src="{{ url_for('static', filename='js/libs/underscore-min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/libs/backbone-min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/sun.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   {% block extra_script %}{% endblock %}
   <!--[if lt IE 7 ]>
     <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

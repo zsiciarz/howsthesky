@@ -25,7 +25,7 @@ def sun():
     return jsonify(
         rising=str(rising),
         setting=str(setting),
-        altitude=body.alt,
+        altitude=(180 * body.alt / ephem.pi),
     )
 
 
