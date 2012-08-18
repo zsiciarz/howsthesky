@@ -8,6 +8,7 @@ from utils import get_rise_and_set_time
 
 
 app = Flask(__name__)
+app.config.from_envvar('HOWSTHESKY_SETTINGS', silent=True)
 
 
 @app.route('/')
