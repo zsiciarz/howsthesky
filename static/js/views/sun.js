@@ -3,7 +3,7 @@ define(
 
     function ($, _, Backbone) {
         var SunView = Backbone.View.extend({
-            el: $("#sun"),
+            el: "#sun",
             initialize: function(options) {
                 _.bindAll(this, "render");
                 this.model.bind("change", this.render);
