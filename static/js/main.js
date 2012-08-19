@@ -14,17 +14,15 @@ requirejs.config({
 });
 
 define(
-    ['libs/jquery', 'libs/underscore', 'libs/backbone'],
-    function($, _, Backbone) {
+    ['libs/jquery', 'models/sun', 'views/sun'],
+    function($, Sun, SunView) {
         $(function() {
-            /*
             var sun = new Sun();
             var sunView = new SunView({
                 model: sun
             });
 
             sun.fetch();
-            */
         });
     }
 );
