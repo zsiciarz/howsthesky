@@ -2,6 +2,9 @@ define(
     ['libs/jquery', 'libs/underscore', 'libs/backbone'],
 
     function ($, _, Backbone) {
+        var sunTemplate = _.template(
+            'SUN: <div class="sun-box <%= cssClass %>"><%= altitude %></div>'
+        );
         var SunView = Backbone.View.extend({
             el: "#sun",
             initialize: function(options) {
@@ -9,8 +12,10 @@ define(
                 this.model.bind("change", this.render);
             },
             render: function() {
-                this.$el.removeClass().addClass(this.getCssClass());
-                this.$el.html("Sun's altitude: " + this.model.getAltitude() + "°");
+                this.$el.html(sunTemplate({
+                    cssClass: this.getCssClass(),
+                    altitude: this.model.getAltitude()
+                }));
             },
             getCssClass: function() {
                 var altitude = this.model.getAltitude();

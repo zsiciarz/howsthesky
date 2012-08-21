@@ -10,17 +10,42 @@
 
 body {
     padding: @baseLineHeight;
+    background: #000 url("../img/helix.jpg") 50% 0% no-repeat;
 }
 
 header {
     padding: @baseLineHeight / 2;
     font-family: @serifFontFamily;
     background: rgba(255, 255, 255, 0.1);
+    border: 1px rgba(255, 255, 255, 0.4) solid;
+    .border-radius(4px);
 }
 .level {
     padding: @baseLineHeight / 2;
-    background: lighten(@bodyBackground, 20%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px rgba(255, 255, 255, 0.4) solid;
+    .border-radius(2px);
 }
 footer {
     text-align: center;
+}
+.sun-box {
+    display: inline-block;
+    margin: 2px;
+    padding: 3px 5px;
+    border: 1px rgba(255, 255, 255, 0.4) solid;
+    .border-radius(2px);
+    color: #fff;
+}
+.civil-twilight {
+    background: #04b;
+}
+.nautical-twilight {
+    background: #028;
+}
+.astronomical-twilight {
+    background: #004;
+}
+.night {
+    background-color: #000;
 }
